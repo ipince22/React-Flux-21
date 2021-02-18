@@ -20,6 +20,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
+				fetch("https://assets.breatheco.de/apis/fake/contact/agenda/ipince")
+					.then(response => response.json())
+					.then(data => {
+						setStore({ contacts: data });
+					});
+
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
