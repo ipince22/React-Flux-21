@@ -8,9 +8,29 @@ export const ContactList = () => {
 
 	return (
 		<>
-			{store.contacts.map((item, index) => {
-				return <p key={index}>{item.full_name}</p>;
-			})}
+			<div className="container">
+				<div className="row d-flex justify-content-center">
+					<div className="col-md-10">
+						<h1 className="display-3">React - flux</h1>
+						<table className="table table-hover">
+							<thead>
+								<tr className="text-center text-primary">
+									<th>Lista Contactos</th>
+								</tr>
+							</thead>
+							<tbody>
+								{store.contacts.map((item, index) => {
+									return (
+										<tr key={index}>
+											<td>{item.full_name}</td>
+										</tr>
+									);
+								})}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
 		</>
 	);
 };

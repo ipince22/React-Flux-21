@@ -38,12 +38,6 @@ export const Demo = () => {
 			<Link to="/">
 				<button className="btn btn-primary">Back home</button>
 			</Link>
-			<br />
-			<br />
-			<br />
-			<Link to="/contactList">
-				<button className="btn btn-primary">Contact List</button>
-			</Link>
 		</div>
 	);
 };
